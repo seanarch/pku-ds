@@ -4,12 +4,19 @@ using namespace std;
 
 int main()
 {
-    int distance; 
-    cin >> distance; 
+    int n; 
+    cin >> n;
+    int arr[n];
+   
 
-    if(float(distance) / 1.2 < (27+23) + float(distance) / 3.0 ) cout<<"Walk"<<endl;
-    else if(float(distance) / 1.2 > (27+23) + float(distance) / 3.0 ) cout<<"Bike"<<endl;
-    else cout<<"All"<<endl;
+    for(int i = 0; i < n; i++) {
+        cin >> arr[n] ;
+
+        if(float(arr[n]) / 1.2 < (27+23) + float(arr[n]) / 3.0 ) cout<<"Walk"<<endl;
+        else if(float(arr[n]) / 1.2 > (27+23) + float(arr[n]) / 3.0 ) cout<<"Bike"<<endl;
+        else cout<<"All"<<endl;
+    }
+
 
     return 0;
 }
