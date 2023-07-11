@@ -4,11 +4,11 @@ using namespace std;
 
 int main()
 {
-  int n; 
-  int k;
-  int arr[n]; 
+  int n = 0; 
+  int k = 0;
   bool equals = false;
-  cin>>k>>n;
+  cin>>n>>k;
+  int arr[n]; 
 
   for (int i = 0; i < n; i++) 
   {
