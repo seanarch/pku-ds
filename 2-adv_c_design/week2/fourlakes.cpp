@@ -2,17 +2,34 @@
 #include <iomanip> 
 using namespace std;
 
+void lake() {
+    int py, dt, t, hz;
+    bool a, b, c, d; 
+    for(py = 1; py <=4; py++) {
+        for(dt = 1; dt<=4; dt++) {
+            for(t = 1; t <=4; t++) {
+                for(hz = 1; hz <=4 ; hz++) {
+                    if((py - dt) * (py - t) * (py - hz) * (dt - t) * (dt - hz) * (t -hz) != 0) {
+                        a = ((py == 3) + (dt == 1) + (hz ==4)) == 1;
+                        b = ((py == 2) + ( dt == 4) + (t == 3) + ( hz == 1)) == 1;
+                        c = ((dt == 3) + ( hz == 4)) == 1;
+                        d = ((py == 1) + (dt == 3) + (t == 4) + (hz == 2)) == 1;
+                        if( a * b * c * d == 1) {
+                            cout << py << endl;
+                            cout << dt << endl; 
+                            cout << t << endl;
+                            cout << hz << endl;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 int main() 
 {
-     
-    // lake1 BoYang, lake2 Dongting, lake 3 Tai, lake 4 Hongze
-    // a: lake2 == 1 , lake4 == 4, lake2 == 3
-    // b: lake4 == 1 , lake2 == 4, lake1 == 2, lake3 = 3
-    // c: lake4 == 4, lake2 == 3
-    // d: lake1 == 1, lake3 == 2, lake4 == 2, lake2 == 3
-     
-     int best;
-     for(best = 1; best <=4; best++) {
-         
-     }
+  lake();
+  return 0;
+      
 }
